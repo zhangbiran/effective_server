@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="头文件\test">
+      <UniqueIdentifier>{8bac3e79-0d2c-4aca-a316-179858995330}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\utility">
+      <UniqueIdentifier>{02e2893b-42bc-4850-8dfc-d2dec9b9ce40}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="threadMain.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dataanalyzer.cpp">
+      <Filter>头文件\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="datacontainer.cpp">
+      <Filter>头文件\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="ioreader.cpp">
+      <Filter>头文件\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="memorypool.cpp">
+      <Filter>头文件\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="stream.cpp">
+      <Filter>头文件\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="thread.cpp">
+      <Filter>头文件\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="datacollector.cpp">
+      <Filter>头文件\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="serverenvir.cpp">
+      <Filter>头文件\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="threadprocs.cpp">
+      <Filter>头文件\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="testdata.cpp">
+      <Filter>头文件\utility</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dataanalyzer.h">
+      <Filter>头文件\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="datacontainer.h">
+      <Filter>头文件\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="ioreader.h">
+      <Filter>头文件\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="loop.h">
+      <Filter>头文件\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="memorypool.h">
+      <Filter>头文件\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="objectpool.h">
+      <Filter>头文件\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="stream.h">
+      <Filter>头文件\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="thread.h">
+      <Filter>头文件\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="twothreaddata.h">
+      <Filter>头文件\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="datacollector.h">
+      <Filter>头文件\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="serverenvir.h">
+      <Filter>头文件\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="testdata.h">
+      <Filter>头文件\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="threadprocs.h">
+      <Filter>头文件\utility</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
