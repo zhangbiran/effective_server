@@ -9,7 +9,8 @@ class ServerEnvir
 {	
 public:
 	virtual ~ServerEnvir() {}
-	virtual void startUp() = 0;
+	virtual bool startUp() = 0;
+	virtual void clearUp() = 0;
 };
 
 class WindowsEnvir : public ServerEnvir
@@ -17,7 +18,9 @@ class WindowsEnvir : public ServerEnvir
 public:
 	WindowsEnvir();
 	~WindowsEnvir();
-	void startUp();
+	bool startUp();
+	void clearUp();
+
 };
 
 	

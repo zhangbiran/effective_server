@@ -2,37 +2,39 @@
 using namespace std;
 #include <windows.h>
 #include "loop.h"
-#include "twothreaddata.h"
+#include "syncthreaddata.h"
 #include "threadprocs.h"
 
 #include "testdata.h"
 #include "stream.h"
 #include "memorypool.h"
 #include "objectpool.h"
-#include "serverenvir.h"
-#include "ioreader.h"
+#include "iodataproducer.h"
+#include "iodatahandlersubclass.h"
+#include "gameserver.h"
 
-int main(void)
+int main(int argc, char** argv)
 {
-	ServerEnvir* serverEnvir = new WindowsEnvir();
-	serverEnvir->startUp();
+	if (!GameServer::instance()->startServer())
+	{
+		GameServer::instance()->stopServer();
+	}
 
 	const int n = 6;
 
 	LogicThreadProc* logicProc = new LogicThreadProc;
-
+	SendThreadProc* sendThreadProc = new SendThreadProc();
+	IOThreadProc* ioProc[n];
 	Thread *ioThread[n];
+	IODataProducer* iodataProducer[n];
+	IODataPackager* iodataHandler[n];
+
 	for (int i = 0; i < n; ++i)
 	{
-		TwoThreadData<LogicData>* ioDataProvider = new TwoThreadData < LogicData >();
-
-		IOThreadProc* ioThreadProc = new IOThreadProc;
-		ioThreadProc->_dataProvider = ioDataProvider;
-		ioThreadProc->_ioReader = new SelectIOReader();
-		ioThreadProc->_dataCollectorProvider = new TwoThreadData < CollectData>();
-		logicProc->_dataProvider.push_back(ioDataProvider);
-
-		ioThread[i] = new Thread(ioThreadProc);
+		iodataProducer[i] = new SelectIODataProducer();
+		iodataHandler[i] = new SelectIODataPackager();
+		ioProc[i] = new IOThreadProc(iodataProducer[i], iodataHandler[i]);
+		ioThread[i] = new Thread(ioProc[i]);
 	}
 
 	for (int i = 0; i < n; ++i)
@@ -40,10 +42,9 @@ int main(void)
 		ioThread[i]->excute();
 	}
 
-	SendThreadProc* sendThreadProc = new SendThreadProc();
-	TwoThreadData<SendToIOData>* serverDataProvider = new TwoThreadData < SendToIOData >();
+	SyncThreadData<SendToIOData>* serverDataProvider = new SyncThreadData < SendToIOData >();
 	sendThreadProc->_sendToIODataProvider = serverDataProvider;
-	logicProc->_sendToIODataProvider = serverDataProvider;
+	//logicProc->_sendDataProducer = serverDataProvider;
 	
 	Thread sendThread(sendThreadProc);
 	sendThread.excute();

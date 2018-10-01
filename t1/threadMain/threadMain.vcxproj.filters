@@ -30,9 +30,6 @@
     <ClCompile Include="datacontainer.cpp">
       <Filter>头文件\utility</Filter>
     </ClCompile>
-    <ClCompile Include="ioreader.cpp">
-      <Filter>头文件\utility</Filter>
-    </ClCompile>
     <ClCompile Include="memorypool.cpp">
       <Filter>头文件\utility</Filter>
     </ClCompile>
@@ -54,15 +51,27 @@
     <ClCompile Include="testdata.cpp">
       <Filter>头文件\utility</Filter>
     </ClCompile>
+    <ClCompile Include="iodataproducer.cpp">
+      <Filter>头文件\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="iodatahandlersubclass.cpp">
+      <Filter>头文件\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="iodatapackager.cpp">
+      <Filter>头文件\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="gameserver.cpp">
+      <Filter>头文件\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="gameserverconfig.cpp">
+      <Filter>头文件\utility</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dataanalyzer.h">
       <Filter>头文件\utility</Filter>
     </ClInclude>
     <ClInclude Include="datacontainer.h">
-      <Filter>头文件\utility</Filter>
-    </ClInclude>
-    <ClInclude Include="ioreader.h">
       <Filter>头文件\utility</Filter>
     </ClInclude>
     <ClInclude Include="loop.h">
@@ -80,9 +89,6 @@
     <ClInclude Include="thread.h">
       <Filter>头文件\utility</Filter>
     </ClInclude>
-    <ClInclude Include="twothreaddata.h">
-      <Filter>头文件\utility</Filter>
-    </ClInclude>
     <ClInclude Include="datacollector.h">
       <Filter>头文件\utility</Filter>
     </ClInclude>
@@ -93,6 +99,24 @@
       <Filter>头文件\utility</Filter>
     </ClInclude>
     <ClInclude Include="threadprocs.h">
+      <Filter>头文件\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="syncthreaddata.h">
+      <Filter>头文件\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="iodataproducer.h">
+      <Filter>头文件\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="iodatahandlersubclass.h">
+      <Filter>头文件\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="iodatapackager.h">
+      <Filter>头文件\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="gameserver.h">
+      <Filter>头文件\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="gameserverconfig.h">
       <Filter>头文件\utility</Filter>
     </ClInclude>
   </ItemGroup>

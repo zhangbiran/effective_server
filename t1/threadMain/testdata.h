@@ -2,7 +2,7 @@
 #define __DATA_
 #include <iostream>
 using namespace std;
-#include "twothreaddata.h"
+#include "syncthreaddata.h"
 #include "stream.h"
 
 class A
@@ -63,7 +63,7 @@ class LogicData
 {
 public:
 	Stream stream;
-	WriteInterface<CollectData>* _collectDataWriteInterface;
+	SyncThreadDataWriter<CollectData>* _collectDataWriteInterface;
 };
 
 struct SendToIOData

@@ -79,7 +79,11 @@
     <ClCompile Include="dataanalyzer.cpp" />
     <ClCompile Include="datacollector.cpp" />
     <ClCompile Include="datacontainer.cpp" />
-    <ClCompile Include="ioreader.cpp" />
+    <ClCompile Include="gameserver.cpp" />
+    <ClCompile Include="gameserverconfig.cpp" />
+    <ClCompile Include="iodatapackager.cpp" />
+    <ClCompile Include="iodatahandlersubclass.cpp" />
+    <ClCompile Include="iodataproducer.cpp" />
     <ClCompile Include="memorypool.cpp" />
     <ClCompile Include="stream.cpp" />
     <ClCompile Include="testdata.cpp" />
@@ -92,7 +96,11 @@
     <ClInclude Include="dataanalyzer.h" />
     <ClInclude Include="datacollector.h" />
     <ClInclude Include="datacontainer.h" />
-    <ClInclude Include="ioreader.h" />
+    <ClInclude Include="gameserver.h" />
+    <ClInclude Include="gameserverconfig.h" />
+    <ClInclude Include="iodatapackager.h" />
+    <ClInclude Include="iodatahandlersubclass.h" />
+    <ClInclude Include="iodataproducer.h" />
     <ClInclude Include="loop.h" />
     <ClInclude Include="memorypool.h" />
     <ClInclude Include="objectpool.h" />
@@ -100,7 +108,7 @@
     <ClInclude Include="testdata.h" />
     <ClInclude Include="thread.h" />
     <ClInclude Include="threadprocs.h" />
-    <ClInclude Include="twothreaddata.h" />
+    <ClInclude Include="syncthreaddata.h" />
     <ClInclude Include="serverenvir.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
