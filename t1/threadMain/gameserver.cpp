@@ -10,12 +10,17 @@ GameServer::GameServer()
 
 	for (int i = 0; i < 4; ++i)
 	{
-		_ioProc[i] = new IOThreadProc;
+		//_ioProc[i] = new IOThreadProc;
 	}
 
 	_logicProc = new LogicThreadProc();
 	_sendThreadProc = new SendThreadProc();
 
+}
+
+GameServer* GameServer::instance()
+{
+	return _instance;
 }
 
 GameServer::~GameServer()
@@ -36,4 +41,5 @@ bool GameServer::startServer()
 bool GameServer::stopServer()
 {
 	delete this;
+	return true;
 }
