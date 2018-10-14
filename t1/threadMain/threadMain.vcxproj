@@ -82,8 +82,9 @@
     <ClCompile Include="gameserver.cpp" />
     <ClCompile Include="gameserverconfig.cpp" />
     <ClCompile Include="iodatapackager.cpp" />
-    <ClCompile Include="iodatahandlersubclass.cpp" />
+    <ClCompile Include="iodatapackagerimpl.cpp" />
     <ClCompile Include="iodataproducer.cpp" />
+    <ClCompile Include="logicthread.cpp" />
     <ClCompile Include="memorypool.cpp" />
     <ClCompile Include="stream.cpp" />
     <ClCompile Include="testdata.cpp" />
@@ -99,8 +100,9 @@
     <ClInclude Include="gameserver.h" />
     <ClInclude Include="gameserverconfig.h" />
     <ClInclude Include="iodatapackager.h" />
-    <ClInclude Include="iodatahandlersubclass.h" />
+    <ClInclude Include="iodatapackagerimpl.h" />
     <ClInclude Include="iodataproducer.h" />
+    <ClInclude Include="logicthread.h" />
     <ClInclude Include="loop.h" />
     <ClInclude Include="memorypool.h" />
     <ClInclude Include="objectpool.h" />

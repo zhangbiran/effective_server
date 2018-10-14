@@ -2,9 +2,6 @@
 #define __game_server_h
 
 class ServerEnvir;
-class LogicThreadProc;
-class SendThreadProc;
-class IOThreadProc;
 
 class GameServer
 {
@@ -19,11 +16,6 @@ private:
 
 private:
 	ServerEnvir* _serverEnvir;
-
-	LogicThreadProc* _logicProc;
-	SendThreadProc* _sendThreadProc;
-	IOThreadProc* _ioProc[4];
-
 };
 
 

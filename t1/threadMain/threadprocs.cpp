@@ -5,7 +5,7 @@
 IOThreadProc::IOThreadProc(IODataProducer* producer, IODataPackager* handler)
 {
 	_ioDataProducer = producer;
-	_ioDataHandler = handler;
+	_ioDataPackager = handler;
 }
 
 int IOThreadProc::excute()
@@ -13,7 +13,7 @@ int IOThreadProc::excute()
 	int i = 0;
 	while (1)
 	{
-		_ioDataHandler->handlerIOData(_ioDataProducer->productData());
+		_ioDataPackager->handlerIOData(_ioDataProducer->productData());
 	}
 }
 
@@ -24,7 +24,7 @@ const IODataProducer* IOThreadProc::getProducer() const
 
 const IODataPackager* IOThreadProc::getHandler() const
 {
-	return _ioDataHandler;
+	return _ioDataPackager;
 }
 
 

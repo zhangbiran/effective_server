@@ -8,7 +8,7 @@ class IODataPackager
 {
 public:
 	virtual ~IODataPackager() {}
-	virtual void handlerIOData(DataContainer* dataContainer) = 0;
+	virtual void handlerIOData(DataContainer* dataContainer);
 };
 
 #endif

@@ -19,7 +19,7 @@ public:
 	const IODataPackager* getHandler() const;
 private:
 	IODataProducer* _ioDataProducer;
-	IODataPackager* _ioDataHandler;
+	IODataPackager* _ioDataPackager;
 };
 
 class LogicThreadProc : public ThreadProc

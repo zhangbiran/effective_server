@@ -11,3 +11,13 @@ DataContainer* SelectIODataProducer::productData()
 {
 	return _testDataContainer;
 }
+
+IOCPIODataProducer::IOCPIODataProducer()
+{
+	_testDataContainer = new RemoteIODataContainer();
+}
+
+DataContainer* IOCPIODataProducer::productData()
+{
+	return _testDataContainer;
+}

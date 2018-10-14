@@ -54,9 +54,6 @@
     <ClCompile Include="iodataproducer.cpp">
       <Filter>头文件\utility</Filter>
     </ClCompile>
-    <ClCompile Include="iodatahandlersubclass.cpp">
-      <Filter>头文件\utility</Filter>
-    </ClCompile>
     <ClCompile Include="iodatapackager.cpp">
       <Filter>头文件\utility</Filter>
     </ClCompile>
@@ -64,6 +61,12 @@
       <Filter>头文件\utility</Filter>
     </ClCompile>
     <ClCompile Include="gameserverconfig.cpp">
+      <Filter>头文件\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="iodatapackagerimpl.cpp">
+      <Filter>头文件\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="logicthread.cpp">
       <Filter>头文件\utility</Filter>
     </ClCompile>
   </ItemGroup>
@@ -107,9 +110,6 @@
     <ClInclude Include="iodataproducer.h">
       <Filter>头文件\utility</Filter>
     </ClInclude>
-    <ClInclude Include="iodatahandlersubclass.h">
-      <Filter>头文件\utility</Filter>
-    </ClInclude>
     <ClInclude Include="iodatapackager.h">
       <Filter>头文件\utility</Filter>
     </ClInclude>
@@ -117,6 +117,12 @@
       <Filter>头文件\utility</Filter>
     </ClInclude>
     <ClInclude Include="gameserverconfig.h">
+      <Filter>头文件\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="iodatapackagerimpl.h">
+      <Filter>头文件\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="logicthread.h">
       <Filter>头文件\utility</Filter>
     </ClInclude>
   </ItemGroup>

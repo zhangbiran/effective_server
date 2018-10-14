@@ -11,11 +11,9 @@ public:
 class Thread
 {
 public:
-	Thread(ThreadProc* command);
-	void excute();
-
+	void start();
+	virtual int onStart() = 0;
 private:
-	ThreadProc* _command;
 	DWORD _threadId;
 };
 

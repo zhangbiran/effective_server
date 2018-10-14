@@ -3,16 +3,14 @@
 
 DWORD WINAPI threadProc(LPVOID param)
 {
-	ThreadProc* command = (ThreadProc*)param;
-	return command->excute();
+	Thread* thread = (Thread*)param;
+	return (DWORD)thread->onStart();
 }
 
-Thread::Thread(ThreadProc* command)
+
+void Thread::start()
 {
-	_command = command;
+	CreateThread(NULL, 0, threadProc, this, 0, &_threadId);
 }
 
-void Thread::excute()
-{
-	CreateThread(NULL, 0, threadProc, _command, 0, &_threadId);
-}
+

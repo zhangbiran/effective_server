@@ -23,5 +23,15 @@ private:
 	std::hash_map<SOCKET, DataContainer*> _dataContainers;
 };
 
+class IOCPIODataProducer : public IODataProducer
+{
+public:
+	IOCPIODataProducer();
+	DataContainer* productData();
+
+private:
+	DataContainer* _testDataContainer;
+};
+
 
 #endif
